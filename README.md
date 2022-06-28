@@ -32,3 +32,44 @@ This is an example of working setup used to manage microfrontend applications in
    ```sh
    npm run start -w packages/app-busket
    ```
+
+## Introduce remote widget
+1. Make copy from app-busket
+```
+cp -r ./packages/app-busket ./packages/component-price
+```
+
+2. Update .env.development with new PORT
+```
+PORT=3102
+```
+
+3. Define exposed component in `module.config.js`
+```
+  name: 'component_price',
+  filename: 'remoteEntry.js',
+  exposes: {
+    './ComponentPrice': './src/ComponentPrice',
+  },
+```
+
+4. Run the container locally
+```
+npm run start
+```
+
+5. Add `@modules/lazy-widget` to packages/app-busket to load the remote widget
+```
+npm i @modules/lazy-widget -w packages/app-busket
+```
+
+6. Add `ComponentPrice` to packages/app-busket
+```
+<LazyWidget
+   containerURL='http://localhost:3102/remoteEntry.js'
+   containerScope="component_price"
+   widget="./ComponentPrice"
+/>
+```
+
+6. Reload the container app
