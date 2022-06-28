@@ -1,0 +1,12 @@
+node_modules
+packages/.*
+coverage
+
+# Terraform local files
+.terraform
+
+# IDE files
+.idea
+.vscode
+*.code-workspace
+

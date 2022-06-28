@@ -1,0 +1,6 @@
+{
+  "workspaces": [
+    "packages/app-container",
+    "packages/app-busket"
+  ]
+}
