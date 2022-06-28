@@ -1,5 +1,5 @@
 import { Switch, BrowserRouter, Route, Redirect } from 'react-router-dom'
-import { LazyWidget } from './LazyWidget'
+import { LazyWidget } from '@modules/lazy-widget'
 
 const routes = {
   home: '/',

@@ -1,6 +1,7 @@
 {
   "workspaces": [
     "packages/app-container",
-    "packages/app-busket"
+    "packages/app-busket",
+    "packages/lazy-widget"
   ]
 }

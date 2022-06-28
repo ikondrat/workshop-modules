@@ -1,9 +1,8 @@
 {
-  "name": "@modules/container",
+  "name": "@modules/lazy-widget",
   "version": "0.42.1",
   "dependencies": {
     "@babel/runtime": "^7.18.3",
-    "@modules/lazy-widget": "^0.42.1",
     "history": "^5.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -13,6 +12,7 @@
     "start": "dotenv -c development -- webpack serve --config webpack.dev.js",
     "setup": "npm ci"
   },
+  "main": "src/index.tsx",
   "files": [
     "build/*"
   ],
